@@ -1,0 +1,781 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=REM:wght@400;700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Kokoro', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* Header container */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background-color: #ffffff;
+  border-bottom: 3.5px solid #e0e0e0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Navigation menu */
+.nav {
+  display: flex;
+  gap: 30px;
+}
+
+.nav button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: #f8f1de;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav button:hover {
+  background-color: #e5d2b0;
+  color: #222;
+}
+
+/* Hamburger icon */
+.logo {
+
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Mobile menu styling */
+.nav.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px; /* Adjust based on header height */
+  right: 0;
+  background-color: #ffffff;
+  width: 100%;
+  padding: 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.nav.active button {
+  padding: 15px 0;
+  width: 100%;
+  text-align: center;
+}
+.hamburger {
+  display: none; /* Hidden by default */
+  font-size: 24px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .nav {
+    display: none; /* Hide the navigation menu by default */
+  }
+
+  .logo {
+    display: block;
+    align-items: center;
+  gap: 10 px; /* Show the hamburger icon on mobile */
+  }
+}
+
+
+/* Logo */
+
+
+.logo img {
+  height: 100px;
+  width: 250px;
+}
+
+
+/* Navigation menu styled as buttons */
+.nav {
+  display: flex;
+  gap: 100px;
+}
+
+.nav button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: #f8f1de;
+  font-size: 18px;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight:500;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav button:hover {
+  background-color: #e5d2b0;
+  color: #222;
+}
+
+/* Main content */
+.main-section {
+  display: flex;
+  justify-content: space-between; /* Space between text and image container */
+  align-items: center;
+  gap: 50px;
+  background-color: #ffffff;
+  padding: 20px;
+  position: relative; /* Makes the container a positioning reference for absolute elements */
+}
+
+.main-text {
+  background-color: #f8f1e5;
+  padding: 30px 60px;
+  border-radius: 30px;
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 50%; /* Limit the width of the text container */
+
+  /* New styles added */
+  margin-left: auto; /* This will push the container to the right */
+  margin-right: 29rem; /* Limit the width of the text container */
+}
+
+.highlight {
+  color: #d4a017;
+}
+
+.underline-text {
+  color: #d4a017;
+  position: relative;
+  display: inline-block; /* Ensures the underline is directly below the text */
+}
+
+.underline-text::after {
+  content: "";
+  position: absolute;
+  width: 200px; /* Adjust based on the text width */
+  height: 20px; /* Adjust based on your underline image height */
+  background-image: url('line.png'); /* Path to your underline image */
+  background-size: contain;
+  background-repeat: no-repeat;
+  bottom: -15px; /* Adjust to position the underline right below the text */
+  left: 27px; /* Aligns underline with the text */
+}
+
+
+
+
+
+
+.main-image {
+  position: relative;
+  width: 450px; /* Set width as needed */
+  height: 500px; /* Set height as needed */
+}
+
+
+.image1 {
+  position: absolute;
+  top: 35px;
+  right: -10px;
+  width: 120%;
+  height: 60%;
+  
+   /* Set opacity for background effect */
+  z-index: 2; /* Stack order */
+}
+
+/* Second (foreground) image styling */
+.image2 {
+  position: absolute;
+  top: -25px; /* Adjust to position as needed */
+  right: -10px; /* Adjust to position as needed */
+  width: 170%;
+  height: 120%;
+  
+ /* Adjust opacity for foreground effect */
+  z-index: 1; /* Higher z-index to appear on top */
+}
+/* Container for the section */
+.company-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 60px 40px;
+  background-color: #ffffff;
+}
+
+/* Left side styling for title and image */
+.left-side {
+  position: relative;
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 20px;
+}
+
+/* Title styling */
+.company-title h1 {
+  font-size: 68px;
+  font-weight: bold;
+  font-family: 'REM', sans-serif;
+  margin-bottom: 20px;
+  margin-left: 250px;
+}
+
+.inter {
+  color: #000000;
+}
+
+.link {
+  color: #e0b400;
+  position: relative;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 18px; /* Adjust based on underline image size */
+  background-image: url('line.png'); /* Path to your underline image */
+  background-size: contain;
+  background-repeat: no-repeat;
+  bottom: -8px;
+  left: 25px;
+}
+
+/* Container for overlapping images */
+.company-image {
+  position: relative;
+  width: 100; /* Ensure it takes full width of the container */
+  height: auto;
+  margin-top: 20px;
+}
+
+/* Center image styling (ME3) */
+.company-image img {
+  width: 200%;
+  max-width: 650px; /* Set a max-width for responsiveness */
+  height: 200%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Left overlapping image (me6) */
+.left-side img:nth-child(3) {
+  position: absolute;
+  left: -50px; /* Move it to the left */
+  top: 20px; /* Adjust vertical alignment */
+  width: 100%;
+  max-width: 200px; /* Adjust based on desired size */
+  border-radius: 10px;
+  z-index: 1; /* Place below the center image */
+}
+
+/* Right overlapping image (me7) */
+.left-side img:nth-child(4) {
+  position: absolute;
+  right: -875px; /* Move it to the right */
+  top: 20px; /* Adjust vertical alignment */
+  width: 100%;
+  max-width: 200px; /* Adjust based on desired size */
+  border-radius: 10px;
+  z-index: 1; /* Place below the center image */
+}
+
+/* Right side styling for text */
+.company-text {
+  font-size: 20px;
+  
+  font-family:'Avenir', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #333;
+  max-width: 45%; /* Adjust width to balance layout */
+  line-height: 1.6;
+  margin-left: auto; /* Aligns the paragraph to the right */
+  padding-right: 20px; /* Adds space between text and right edge */
+  text-align:justify;
+}
+
+
+
+
+/* Goals Section */
+.goals-section {
+  padding: 80px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  text-align: left;
+}
+.g {
+  color: #e0b400;
+}
+
+.oals {
+  color: #000000;
+  position: relative;
+}
+.oals::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 18px; /* Adjust based on underline image size */
+  background-image: url('line.png'); /* Path to your underline image */
+  background-size: contain;
+  background-repeat: no-repeat;
+  bottom: -8px;
+  left: 55px;
+}
+.goals-text h1 {
+  font-size: 68px;
+  font-weight: bold;
+  font-family: 'REM', sans-serif;
+  margin-bottom: 20px;
+  margin-left: 250px;
+}
+
+
+.goals-text {
+  font-size: 20px;
+  font-family:'Avenir', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #333;
+  max-width: 45%; /* Adjust width to balance layout */
+  line-height: 1.6;
+   /* Aligns the paragraph to the right */
+  padding-right: 20px; /* Adds space between text and right edge */
+  text-align:justify;
+}
+
+.goals-text .highlight {
+  color: #e0b400;
+}
+
+.goals-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.goal-image {
+  position: relative;
+  width: 450px; /* Set width as needed */
+  height: 500px; /* Set height as needed */
+}
+
+
+.image11 {
+  position: absolute;
+  top: 105px;
+  right: -10px;
+  width: 120%;
+  height: 60%;
+  
+   /* Set opacity for background effect */
+  z-index: 2; /* Stack order */
+}
+
+/* Second (foreground) image styling */
+.image21 {
+  position: absolute;
+  top: 60px; /* Adjust to position as needed */
+  right: -40px; /* Adjust to position as needed */
+  width: 450px;
+  height: 350px;
+  
+ /* Adjust opacity for foreground effect */
+  z-index: 1; /* Higher z-index to appear on top */
+}
+
+/* Join Us Section */
+.join-section {
+  padding: 60px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff; /* Light yellow background */
+  flex-wrap: wrap; /* Makes it responsive */
+  text-align: left;
+  border-radius: 10px; /* Rounded corners for the section */
+}
+.j{
+  color: #e0b400;
+}
+.U{
+  color: #e0b400;
+}
+
+.oin {
+  color: #000000;
+  position: relative;
+}
+.s {
+  color: #000000;
+  position: relative;
+}
+.s::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 18px; /* Adjust based on underline image size */
+  background-image: url('line.png'); /* Path to your underline image */
+  background-size: contain;
+  background-repeat: no-repeat;
+  bottom: -8px;
+  left: -5px;
+}
+.join-text h1 {
+  font-size: 68px;
+  font-weight: bold;
+  font-family: 'REM', sans-serif;
+  margin-bottom: 20px;
+  margin-left: 250px;
+}
+.join-text p {
+  font-size: 68px;
+  font-weight: bold;
+  font-family: 'Noto Serif Bengali', serif;
+  margin-bottom: 20px;
+  margin-left: 250px;
+ 
+}
+
+
+
+.title-highlight {
+  font-size: 2rem;
+  color: #e0b400;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.title-highlight::after {
+  content: "";
+  width: 80px; /* Adjust width for underline */
+  height: 5px;
+  background-color: #e0b400;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  border-radius: 2px;
+}
+
+.join-text p {
+  font-size:28px;
+  color: #333;
+  margin-top: 10px;
+}
+
+.highlight {
+  color: #e0b400;
+  font-weight: bold;
+}
+
+.join-info {
+  background-color: #f8f1e5;
+  padding: 30px 60px;
+  border-radius: 55px;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  flex-direction: column;
+  max-width: 115%;
+  min-height: 150px;
+}
+
+.email {
+  color: #e0b400;
+  font-weight: bold;
+}
+
+.join-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.join-image {
+  position: relative;
+  width: 550px; /* Set width as needed */
+  height: 600px; /* Set height as needed */
+}
+
+
+.image111 {
+  position: absolute;
+  top: -60px;
+  right: -15px;
+  width: 120%;
+  height: 60%;
+  
+   /* Set opacity for background effect */
+  z-index: 2; /* Stack order */
+}
+
+/* Second (foreground) image styling */
+.image211 {
+  position: absolute;
+  top: 250px; /* Adjust to position as needed */
+  right: -20px; /* Adjust to position as needed */
+  width: 550px;
+  height: 350px;
+  
+ /* Adjust opacity for foreground effect */
+  z-index: 1; /* Higher z-index to appear on top */
+}
+
+
+
+/* Contact Section */
+.contact-section {
+  position: relative; /* Necessary for absolute positioning of the image within this section */
+  padding: 50px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  max-width: 400px;
+  margin-right: 20px;
+}
+
+.contact-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  margin: 5px 0;
+}
+
+.contact-info a {
+  color: #d4a017;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Form */
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.contact-form textarea {
+  grid-column: 1 / -1;
+  resize: vertical;
+  height: 100px;
+}
+
+.contact-form button {
+  grid-column: 1 / -1;
+  padding: 10px;
+  background-color: #e5d2b0;
+  
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contact-form button:hover {
+  background-color: #ffe100;
+}
+
+/* Image positioned at the bottom left */
+.bottom-left-image {
+  position: absolute;
+  bottom: 5px;
+ left: 400px;
+  width: 200px; /* Adjust size as needed */
+  height:200px;
+  opacity: 0.8; /* Optional opacity */
+}
+@media (max-width: 768px) {
+  /* Header */
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+  }
+ 
+
+  .hamburger {
+    display: block; /* Show hamburger menu */
+  }
+
+  .logo {
+    display: block; /* Show logo on smaller screens */
+  }
+
+  .nav {
+    flex-direction: column;
+    display: none;
+    gap: 15px;
+    text-align: center;
+  }
+
+  /* Main Section */
+  .main-section {
+    flex-direction: column; /* Stack elements */
+    text-align: center;
+  }
+
+  .main-text {
+    max-width: 100%;
+    font-size: 36px; /* Adjust font size */
+    margin: 0;
+  }
+
+  .main-image {
+    width: 100%;
+  }
+
+  /* Company Section */
+  .company-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .company-text {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .left-side img {
+    width: 80%; /* Adjust image size */
+  }
+
+  /* Goals Section */
+  .goals-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .goal-image img {
+    width: 100%;
+  }
+
+  /* Join Us Section */
+  .join-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .join-image img {
+    width: 100%;
+  }
+
+  /* Contact Section */
+  .contact-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-info {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .contact-form {
+    grid-template-columns: 1fr; /* Single column for form */
+  }
+}
+
+/* For Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  /* Header */
+  .header {
+    padding: 10px;
+  }
+  .nav {
+    display: none; /* Hide navigation by default */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger menu */
+  }
+
+  .nav button {
+    font-size: 14px; /* Smaller font */
+  }
+
+  /* Main Section */
+  .main-text {
+    font-size: 24px;
+    padding: 10px;
+  }
+
+  .main-image img {
+    width: 100%; /* Full width */
+    height: auto;
+  }
+
+  /* Goals Section */
+  .goals-text {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  /* Join Us Section */
+  .join-text h1 {
+    font-size: 20px; /* Smaller heading */
+  }
+
+  /* Contact Section */
+  .contact-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .contact-form button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
